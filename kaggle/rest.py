@@ -90,10 +90,6 @@ class RESTClientObject(object):
             self.pool_manager = urllib3.ProxyManager(
                 num_pools=pools_size,
                 maxsize=maxsize,
-                cert_reqs=cert_reqs,
-                ca_certs=ca_certs,
-                cert_file=configuration.cert_file,
-                key_file=configuration.key_file,
                 proxy_url=configuration.proxy,
                 **addition_pool_args
             )
@@ -101,10 +97,6 @@ class RESTClientObject(object):
             self.pool_manager = urllib3.PoolManager(
                 num_pools=pools_size,
                 maxsize=maxsize,
-                cert_reqs=cert_reqs,
-                ca_certs=ca_certs,
-                cert_file=configuration.cert_file,
-                key_file=configuration.key_file,
                 **addition_pool_args
             )
 
